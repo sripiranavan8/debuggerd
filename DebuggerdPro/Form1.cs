@@ -61,7 +61,7 @@ namespace DebuggerdPro
             {
                 string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=debuggeddb;";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-                string query = "SELECT * FROM usertable where UserName='Piranavan' AND Password='1234'";
+                string query = "SELECT * FROM `usertable` WHERE `UserName` = '" + username + "' AND `Password` = '" + pass + "'";
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
                 MySqlDataReader reader;
