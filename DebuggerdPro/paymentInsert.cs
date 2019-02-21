@@ -15,6 +15,9 @@ namespace DebuggerdPro
         public paymentInsert()
         {
             InitializeComponent();
+            var time = DateTime.Now;
+            string formattedTime = time.ToString("yyyy, MM, dd, hh, mm, ss");
+            dateTime.Text = formattedTime;
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -82,6 +85,11 @@ namespace DebuggerdPro
             this.Hide();
             Main f = new Main();
             f.Show();
+        }
+
+        private void paymentInsert_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -15,6 +15,9 @@ namespace DebuggerdPro
         public register()
         {
             InitializeComponent();
+            var time = DateTime.Now;
+            string formattedTime = time.ToString("yyyy, MM, dd, hh, mm, ss");
+            dateTime.Text = formattedTime;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -110,6 +113,11 @@ namespace DebuggerdPro
             salary.Text = "";
             nic.Text = "";
             address.Text = "";
+        }
+
+        private void register_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -15,6 +15,9 @@ namespace DebuggerdPro
         public ProductInsert()
         {
             InitializeComponent();
+            var time = DateTime.Now;
+            string formattedTime = time.ToString("yyyy, MM, dd, hh, mm, ss");
+            dateTime.Text = formattedTime;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -79,6 +82,11 @@ namespace DebuggerdPro
             ptype.Text = "";
             sdiscount.Text = "";
             sprice.Text = "";
+        }
+
+        private void ProductInsert_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

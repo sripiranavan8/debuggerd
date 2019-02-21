@@ -36,6 +36,7 @@
             this.delete = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.dateTime = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,6 +44,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label1.Location = new System.Drawing.Point(180, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -72,6 +74,7 @@
             // 
             // add
             // 
+            this.add.BackColor = System.Drawing.Color.Green;
             this.add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add.Location = new System.Drawing.Point(462, 74);
             this.add.Margin = new System.Windows.Forms.Padding(2);
@@ -79,11 +82,12 @@
             this.add.Size = new System.Drawing.Size(84, 35);
             this.add.TabIndex = 3;
             this.add.Text = "ADD";
-            this.add.UseVisualStyleBackColor = true;
+            this.add.UseVisualStyleBackColor = false;
             this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // update
             // 
+            this.update.BackColor = System.Drawing.Color.Yellow;
             this.update.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.update.Location = new System.Drawing.Point(462, 140);
             this.update.Margin = new System.Windows.Forms.Padding(2);
@@ -91,11 +95,12 @@
             this.update.Size = new System.Drawing.Size(84, 30);
             this.update.TabIndex = 3;
             this.update.Text = "Update";
-            this.update.UseVisualStyleBackColor = true;
+            this.update.UseVisualStyleBackColor = false;
             this.update.Click += new System.EventHandler(this.update_Click);
             // 
             // delete
             // 
+            this.delete.BackColor = System.Drawing.Color.Red;
             this.delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delete.Location = new System.Drawing.Point(462, 206);
             this.delete.Margin = new System.Windows.Forms.Padding(2);
@@ -103,7 +108,7 @@
             this.delete.Size = new System.Drawing.Size(84, 31);
             this.delete.TabIndex = 3;
             this.delete.Text = "Delete";
-            this.delete.UseVisualStyleBackColor = true;
+            this.delete.UseVisualStyleBackColor = false;
             this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
             // label2
@@ -119,6 +124,7 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(462, 261);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
@@ -126,14 +132,24 @@
             this.button1.Size = new System.Drawing.Size(84, 32);
             this.button1.TabIndex = 5;
             this.button1.Text = "Exit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dateTime
+            // 
+            this.dateTime.AutoSize = true;
+            this.dateTime.Location = new System.Drawing.Point(378, 318);
+            this.dateTime.Name = "dateTime";
+            this.dateTime.Size = new System.Drawing.Size(0, 16);
+            this.dateTime.TabIndex = 6;
             // 
             // paymentView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(569, 323);
+            this.BackColor = System.Drawing.Color.Turquoise;
+            this.ClientSize = new System.Drawing.Size(569, 337);
+            this.Controls.Add(this.dateTime);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.delete);
@@ -146,6 +162,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "paymentView";
             this.Text = "paymentView";
+            this.Load += new System.EventHandler(this.paymentView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -162,5 +179,6 @@
         private System.Windows.Forms.Button delete;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label dateTime;
     }
 }

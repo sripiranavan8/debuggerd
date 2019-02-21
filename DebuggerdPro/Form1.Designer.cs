@@ -32,13 +32,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.userName = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Register = new System.Windows.Forms.LinkLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Exit = new System.Windows.Forms.Button();
             this.Login = new System.Windows.Forms.Button();
             this.password = new System.Windows.Forms.TextBox();
-            this.Register = new System.Windows.Forms.LinkLabel();
+            this.dateTime = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -75,6 +76,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.dateTime);
             this.panel1.Controls.Add(this.Register);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
@@ -89,6 +91,17 @@
             this.panel1.Size = new System.Drawing.Size(711, 333);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // Register
+            // 
+            this.Register.AutoSize = true;
+            this.Register.Location = new System.Drawing.Point(416, 291);
+            this.Register.Name = "Register";
+            this.Register.Size = new System.Drawing.Size(225, 13);
+            this.Register.TabIndex = 7;
+            this.Register.TabStop = true;
+            this.Register.Text = "Don\'t Have an Account Click Here to Register";
+            this.Register.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Register_LinkClicked);
             // 
             // panel2
             // 
@@ -151,16 +164,13 @@
             this.password.TabIndex = 3;
             this.password.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // Register
+            // dateTime
             // 
-            this.Register.AutoSize = true;
-            this.Register.Location = new System.Drawing.Point(416, 291);
-            this.Register.Name = "Register";
-            this.Register.Size = new System.Drawing.Size(225, 13);
-            this.Register.TabIndex = 7;
-            this.Register.TabStop = true;
-            this.Register.Text = "Don\'t Have an Account Click Here to Register";
-            this.Register.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Register_LinkClicked);
+            this.dateTime.AutoSize = true;
+            this.dateTime.Location = new System.Drawing.Point(562, 311);
+            this.dateTime.Name = "dateTime";
+            this.dateTime.Size = new System.Drawing.Size(0, 13);
+            this.dateTime.TabIndex = 8;
             // 
             // Form1
             // 
@@ -191,6 +201,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel Register;
+        private System.Windows.Forms.Label dateTime;
     }
 }
 

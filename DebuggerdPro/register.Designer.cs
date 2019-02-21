@@ -50,6 +50,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.dateTime = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +58,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label1.Location = new System.Drawing.Point(151, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(301, 31);
@@ -229,39 +231,52 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Green;
             this.button1.Location = new System.Drawing.Point(73, 394);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 28);
             this.button1.TabIndex = 7;
             this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.Location = new System.Drawing.Point(428, 390);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(112, 28);
             this.button2.TabIndex = 7;
             this.button2.Text = "Exit";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.Yellow;
             this.button3.Location = new System.Drawing.Point(273, 390);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(99, 32);
             this.button3.TabIndex = 8;
             this.button3.Text = "Clear";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // dateTime
+            // 
+            this.dateTime.AutoSize = true;
+            this.dateTime.Location = new System.Drawing.Point(398, 430);
+            this.dateTime.Name = "dateTime";
+            this.dateTime.Size = new System.Drawing.Size(0, 13);
+            this.dateTime.TabIndex = 9;
             // 
             // register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(599, 437);
+            this.BackColor = System.Drawing.Color.Turquoise;
+            this.ClientSize = new System.Drawing.Size(599, 444);
+            this.Controls.Add(this.dateTime);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -284,6 +299,7 @@
             this.Controls.Add(this.label1);
             this.Name = "register";
             this.Text = "register";
+            this.Load += new System.EventHandler(this.register_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -315,5 +331,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label dateTime;
     }
 }

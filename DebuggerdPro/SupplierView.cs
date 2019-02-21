@@ -16,6 +16,9 @@ namespace DebuggerdPro
         {
             InitializeComponent();
             DisplayTable();
+            var time = DateTime.Now;
+            string formattedTime = time.ToString("yyyy, MM, dd, hh, mm, ss");
+            dateTime.Text = formattedTime;
         }
         MySqlCommandBuilder scb;
         MySqlDataAdapter sda;

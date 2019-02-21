@@ -15,6 +15,9 @@ namespace DebuggerdPro
         public CustomerInsert()
         {
             InitializeComponent();
+            var time = DateTime.Now;
+            string formattedTime = time.ToString("yyyy, MM, dd, hh, mm, ss");
+            dateTime.Text = formattedTime;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -104,6 +107,11 @@ namespace DebuggerdPro
             this.Hide();
             CustomerView cv = new CustomerView();
             cv.Show();
+        }
+
+        private void CustomerInsert_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

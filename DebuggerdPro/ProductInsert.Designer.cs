@@ -40,12 +40,14 @@
             this.sprice = new System.Windows.Forms.TextBox();
             this.ptype = new System.Windows.Forms.TextBox();
             this.sdiscount = new System.Windows.Forms.TextBox();
+            this.dateTime = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkBlue;
             this.label1.Location = new System.Drawing.Point(285, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(229, 31);
@@ -90,6 +92,7 @@
             // 
             // save
             // 
+            this.save.BackColor = System.Drawing.Color.Green;
             this.save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.save.Location = new System.Drawing.Point(133, 278);
             this.save.Name = "save";
@@ -97,29 +100,31 @@
             this.save.Size = new System.Drawing.Size(86, 37);
             this.save.TabIndex = 2;
             this.save.Text = "Save";
-            this.save.UseVisualStyleBackColor = true;
+            this.save.UseVisualStyleBackColor = false;
             this.save.Click += new System.EventHandler(this.save_Click);
             // 
             // clear
             // 
+            this.clear.BackColor = System.Drawing.Color.Yellow;
             this.clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clear.Location = new System.Drawing.Point(329, 278);
             this.clear.Name = "clear";
             this.clear.Size = new System.Drawing.Size(91, 37);
             this.clear.TabIndex = 3;
             this.clear.Text = "Clear";
-            this.clear.UseVisualStyleBackColor = true;
+            this.clear.UseVisualStyleBackColor = false;
             this.clear.Click += new System.EventHandler(this.clear_Click);
             // 
             // exit
             // 
+            this.exit.BackColor = System.Drawing.Color.Transparent;
             this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exit.Location = new System.Drawing.Point(568, 278);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(103, 37);
             this.exit.TabIndex = 4;
             this.exit.Text = "Exit";
-            this.exit.UseVisualStyleBackColor = true;
+            this.exit.UseVisualStyleBackColor = false;
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // pname
@@ -151,11 +156,21 @@
             this.sdiscount.Size = new System.Drawing.Size(186, 20);
             this.sdiscount.TabIndex = 8;
             // 
+            // dateTime
+            // 
+            this.dateTime.AutoSize = true;
+            this.dateTime.Location = new System.Drawing.Point(539, 332);
+            this.dateTime.Name = "dateTime";
+            this.dateTime.Size = new System.Drawing.Size(0, 13);
+            this.dateTime.TabIndex = 9;
+            // 
             // ProductInsert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(776, 331);
+            this.BackColor = System.Drawing.Color.Turquoise;
+            this.ClientSize = new System.Drawing.Size(776, 350);
+            this.Controls.Add(this.dateTime);
             this.Controls.Add(this.sdiscount);
             this.Controls.Add(this.ptype);
             this.Controls.Add(this.sprice);
@@ -170,6 +185,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ProductInsert";
             this.Text = "ProductInsert";
+            this.Load += new System.EventHandler(this.ProductInsert_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,5 +205,6 @@
         private System.Windows.Forms.TextBox sprice;
         private System.Windows.Forms.TextBox ptype;
         private System.Windows.Forms.TextBox sdiscount;
+        private System.Windows.Forms.Label dateTime;
     }
 }

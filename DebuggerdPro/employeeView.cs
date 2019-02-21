@@ -15,6 +15,9 @@ namespace DebuggerdPro
         public employeeView()
         {
             InitializeComponent();
+            var time = DateTime.Now;
+            string formattedTime = time.ToString("yyyy, MM, dd, hh, mm, ss");
+            dateTime.Text = formattedTime;
             DisplayTable();
         }
         MySqlDataAdapter sda;
@@ -107,6 +110,11 @@ namespace DebuggerdPro
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

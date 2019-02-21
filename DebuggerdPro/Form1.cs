@@ -15,6 +15,9 @@ namespace DebuggerdPro
         public Form1()
         {
             InitializeComponent();
+            var time = DateTime.Now;
+            string formattedTime = time.ToString("yyyy, MM, dd, hh, mm, ss");
+            dateTime.Text = formattedTime;
             password.PasswordChar = '*';
             password.MaxLength = 10;
         }
@@ -36,7 +39,6 @@ namespace DebuggerdPro
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void Exit_Click(object sender, EventArgs e)

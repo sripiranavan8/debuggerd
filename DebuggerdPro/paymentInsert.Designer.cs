@@ -43,12 +43,14 @@
             this.type = new System.Windows.Forms.ComboBox();
             this.description = new System.Windows.Forms.RichTextBox();
             this.exit = new System.Windows.Forms.Button();
+            this.dateTime = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkBlue;
             this.label1.Location = new System.Drawing.Point(203, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(256, 31);
@@ -101,22 +103,24 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Green;
             this.button1.Location = new System.Drawing.Point(120, 303);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 36);
             this.button1.TabIndex = 2;
             this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.Yellow;
             this.button2.Location = new System.Drawing.Point(281, 303);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(107, 36);
             this.button2.TabIndex = 3;
             this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // bill
@@ -172,19 +176,30 @@
             // 
             // exit
             // 
+            this.exit.BackColor = System.Drawing.Color.LightYellow;
             this.exit.Location = new System.Drawing.Point(444, 303);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(96, 36);
             this.exit.TabIndex = 8;
             this.exit.Text = "Exit";
-            this.exit.UseVisualStyleBackColor = true;
+            this.exit.UseVisualStyleBackColor = false;
             this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
+            // dateTime
+            // 
+            this.dateTime.AutoSize = true;
+            this.dateTime.Location = new System.Drawing.Point(441, 369);
+            this.dateTime.Name = "dateTime";
+            this.dateTime.Size = new System.Drawing.Size(0, 13);
+            this.dateTime.TabIndex = 9;
             // 
             // paymentInsert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Turquoise;
             this.ClientSize = new System.Drawing.Size(660, 383);
+            this.Controls.Add(this.dateTime);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.description);
             this.Controls.Add(this.type);
@@ -202,6 +217,7 @@
             this.Controls.Add(this.label1);
             this.Name = "paymentInsert";
             this.Text = "paymentInsert";
+            this.Load += new System.EventHandler(this.paymentInsert_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,5 +240,6 @@
         private System.Windows.Forms.ComboBox type;
         private System.Windows.Forms.RichTextBox description;
         private System.Windows.Forms.Button exit;
+        private System.Windows.Forms.Label dateTime;
     }
 }

@@ -15,6 +15,9 @@ namespace DebuggerdPro
         public CustomerView()
         {
             InitializeComponent();
+            var time = DateTime.Now;
+            string formattedTime = time.ToString("yyyy, MM, dd, hh, mm, ss");
+            dateTime.Text = formattedTime;
             DisplayTable();
         }
         MySqlDataAdapter sda;
@@ -97,6 +100,11 @@ namespace DebuggerdPro
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void CustomerView_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -15,6 +15,9 @@ namespace DebuggerdPro
         public userRegister()
         {
             InitializeComponent();
+            var time = DateTime.Now;
+            string formattedTime = time.ToString("yyyy, MM, dd, hh, mm, ss");
+            dateTime.Text = formattedTime;
             password.PasswordChar = '*';
             password.MaxLength = 10;
             rpassword.PasswordChar = '*';
@@ -91,6 +94,11 @@ namespace DebuggerdPro
             this.Hide();
             Form1 f = new Form1();
             f.Show();
+        }
+
+        private void userRegister_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
