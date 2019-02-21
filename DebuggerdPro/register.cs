@@ -38,7 +38,7 @@ namespace DebuggerdPro
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 ne = new Form1();
+            Main ne = new Main();
             ne.Show();
         }
 
